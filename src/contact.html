@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/contact.css">
+</head>
+<body>
+    <!-- header -->
+     <div id="header"></div>
+    <!-- header -->
+
+    <section class="contact-container">
+        <div class="img-container">
+            <img src="../img/contact.jpg" alt="">
+        </div>
+        <div class="heading">
+            <h1>Contact Us</h1>
+        </div>
+        <div class="info-container">
+                <div class="group">
+                   <label for="full-name">Full Name</label>
+                   <input type="text" id="full-name" name="full-name" required>
+                </div>
+                <div class="group">
+                   <label for="email">Email</label>
+                   <input type="email" id="email" name="email" required>
+                </div>              
+                <div class="group">
+                   <label for="message">Message</label>
+                  <textarea name="message" id="message" required></textarea>
+                </div>              
+        </div>
+
+        <button type="submit" class="submit-btn">
+            Send message
+        </button>
+
+    </section>
+
+    <script>
+        fetch("header.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("header").innerHTML = data;
+        });
+    </script>
+</body>
+</html>

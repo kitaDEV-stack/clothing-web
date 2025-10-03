@@ -19,10 +19,11 @@ html{
 }
 body{
     min-height: 100vh;
-    background-image: url(../img/background.jpg);
+    background-image: url(../../img/background.jpg);
     background-position: right;
     background-size: cover;
     overflow: hidden;
+
 }
 
 .wrapper{

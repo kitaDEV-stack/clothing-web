@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div id="header"></div>
+    <section class="about-section">
+      <div class="top-left">
+        <h2>About Us</h2>
+        <p>Lorem ipsum dolor sit,amet consectetur adipisicing elit. Voluptatem aspernatur esse dolorem perferendis. Magni veniam reprehenderit, facere sapiente alias magnam quae tempore quisquam sunt, quod similique! Corrupti quo voluptatem placeat.<a href="#">Read More.</a></p>
+      </div>
+      <div class="bottom-right">
+        <h2>Less is more.</h2>
+      </div>
+      <div class="top-right">
+        <div class="icons">
+          <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        </div>
+        
+      </div>
+    </section>
+
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
+      });
+  </script>
+</body>
+</html>

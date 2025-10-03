@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --accent-color: #948979;
+    --base-color: #393E46;
+    --text-color: #222831;
+    --input-color: #DFD0B8;
+     --box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Poppins, Courier, monospace;
+    font-size: 12pt;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo a{
+    text-decoration: none;
+    color: var(--input-color);
+}
+
+.logo img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+nav .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: var(--base-color);
+   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.nav-container{
+    display: flex;
+    gap: 20px;   
+}
+
+.nav-container a{
+    color: var(--input-color);
+    text-decoration: none;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.nav-container a::before,
+.nav-container a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: radial-gradient(transparent, #A6A6A6);
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.4s ease-out;
+}
+
+.nav-container a::before {
+  top: 0;
+  left: 0;
+}
+
+.nav-container a::after {
+  bottom: 0;
+  right: 0;
+}
+
+.nav-container a:hover::before,
+.nav-container a:hover::after {
+  width: 200%;
+  height: 200%;
+  opacity: 0.6;
+  transition: all 0.4s ease-out;
+}
+
+.nav-container a:hover::before {
+  top: -50%;
+  left: -50%;
+}
+
+.nav-container a:hover::after {
+  bottom: -50%;
+  right: -50%;
+}
+
+.login-button a{
+    color: var(--accent-color);
+    width: 2.7rem;
+    height: 2.7rem;
+    cursor: pointer;
+    text-align: center;
+}
